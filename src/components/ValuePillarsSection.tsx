@@ -26,7 +26,7 @@ const ValuePillarsSection = () => {
   ];
 
   return (
-    <section id="value-pillars" className="relative py-12 sm:py-20 md:py-28 px-4 sm:px-8 bg-gray-100 text-center mb-8 overflow-hidden">
+    <section id="value-pillars" className="relative py-12 sm:py-20 md:py-28 px-4 sm:px-8 bg-gray-100 text-center mb-0 overflow-hidden">
       <div className="max-w-6xl mx-auto flex flex-col items-center">
         <h2 className="statement-text text-blue-deep text-center mb-4 font-bold text-2xl md:text-4xl">
           Why Choose Me
@@ -61,7 +61,7 @@ const ValuePillarsSection = () => {
         </div>
       </div>
       {/* Soft gradient at the bottom for smooth transition */}
-      <div className="pointer-events-none absolute left-0 right-0 bottom-0 h-16 sm:h-24 bg-gradient-to-b from-gray-100 to-blue-gradient opacity-90" />
+      <div className="pointer-events-none absolute left-0 right-0 bottom-0 h-16 sm:h-24 bg-gradient-to-b from-gray-100 to-[#202838] opacity-100" />
     </section>
   );
 };

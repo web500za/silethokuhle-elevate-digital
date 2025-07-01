@@ -66,11 +66,11 @@ const ConnectionSection = () => {
         <p className="body-large text-white mb-12 max-w-2xl mx-auto text-base md:text-lg font-semibold">
           Stop settling for task execution. Start experiencing strategic transformation.
         </p>
-        <div className="flex flex-col sm:flex-row gap-6 sm:gap-8 justify-center my-8 sm:my-12">
+        <div className="flex flex-col sm:flex-row gap-6 sm:gap-8 justify-center my-10 sm:my-16">
           <Dialog>
             <DialogTrigger asChild>
               <Button 
-                className="w-full sm:w-auto py-4 px-8 text-base sm:text-lg rounded-lg font-semibold"
+                className="w-full sm:w-auto flex-1 py-4 px-8 text-base sm:text-lg rounded-lg font-semibold"
               >
                 Contact Me
               </Button>
@@ -83,9 +83,9 @@ const ConnectionSection = () => {
             </DialogContent>
           </Dialog>
           <a
-            href="/static/Silethokuhle-Mncube-CV-compressed_compressed.pdf"
+            href="/Silethokuhle-Mncube-CV-compressed_compressed.pdf"
             download
-            className="w-full sm:w-auto py-4 px-8 text-base sm:text-lg rounded-lg font-semibold border-2 border-white text-white bg-transparent hover:bg-white hover:text-blue-deep transition-all flex items-center justify-center"
+            className="w-full sm:w-auto flex-1 py-4 px-8 text-base sm:text-lg rounded-lg font-semibold border-2 border-white text-white bg-transparent hover:bg-white hover:text-blue-deep transition-all flex items-center justify-center"
             style={{ minWidth: '150px' }}
           >
             Download CV
