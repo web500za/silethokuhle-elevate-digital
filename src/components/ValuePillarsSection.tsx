@@ -24,7 +24,7 @@ const ValuePillarsSection = () => {
   ];
 
   return (
-    <section className="py-24 px-6 emerald-soft">
+    <section className="py-24 px-6 cool-gray">
       <div className="max-w-6xl mx-auto">
         <h2 className="statement-text text-charcoal text-center mb-16">
           Three Pillars of Unprecedented Value
@@ -32,9 +32,9 @@ const ValuePillarsSection = () => {
         
         <div className="grid md:grid-cols-3 gap-8">
           {pillars.map((pillar, index) => (
-            <Card key={index} className="border-none shadow-lg hover:shadow-xl transition-shadow duration-300 emerald-deep text-soft-white">
+            <Card key={index} className="border-none shadow-lg hover:shadow-xl transition-shadow duration-300 navy-deep text-soft-white">
               <CardContent className="p-8">
-                <div className="h-2 w-16 bg-white/30 mb-6 rounded"></div>
+                <div className="h-2 w-16 teal-accent mb-6 rounded"></div>
                 <h3 className="text-2xl font-bold mb-2">{pillar.title}</h3>
                 <p className="text-white/80 font-medium mb-4">{pillar.subtitle}</p>
                 <p className="text-white/90 mb-6 leading-relaxed">{pillar.description}</p>

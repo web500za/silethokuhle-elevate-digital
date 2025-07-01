@@ -35,7 +35,7 @@ const TransformationSection = () => {
         
         <div className="space-y-8">
           {transformations.map((transformation, index) => (
-            <Card key={index} className="border-l-4 border-primary shadow-md hover:shadow-lg transition-shadow">
+            <Card key={index} className="border-l-4 border-teal shadow-md hover:shadow-lg transition-shadow">
               <CardContent className="p-8">
                 <div className="grid md:grid-cols-3 gap-6">
                   <div>
@@ -44,11 +44,11 @@ const TransformationSection = () => {
                     <p className="text-charcoal/80">{transformation.challenge}</p>
                   </div>
                   <div>
-                    <p className="text-primary text-sm font-medium mb-2">MY APPROACH</p>
+                    <p className="text-teal text-sm font-medium mb-2">MY APPROACH</p>
                     <p className="text-charcoal/80">{transformation.solution}</p>
                   </div>
                   <div>
-                    <p className="text-primary text-sm font-medium mb-2">BUSINESS IMPACT</p>
+                    <p className="text-teal text-sm font-medium mb-2">BUSINESS IMPACT</p>
                     <p className="text-charcoal font-medium">{transformation.impact}</p>
                   </div>
                 </div>

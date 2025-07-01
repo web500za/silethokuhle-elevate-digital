@@ -3,7 +3,7 @@ import { Badge } from "@/components/ui/badge";
 
 const HeroSection = () => {
   return (
-    <section className="min-h-screen emerald-deep flex items-center justify-center px-6 py-12">
+    <section className="min-h-screen navy-deep flex items-center justify-center px-6 py-12">
       <div className="max-w-6xl mx-auto text-center">
         {/* Credential Badges */}
         <div className="flex flex-wrap justify-center gap-4 mb-8">
@@ -37,8 +37,8 @@ const HeroSection = () => {
           Management Consultant × Technical Architect × Strategic Partner
         </p>
 
-        {/* Subtle accent line */}
-        <div className="w-32 h-1 bg-gradient-to-r from-transparent via-white/50 to-transparent mx-auto mt-12 animate-pulse"></div>
+        {/* Teal accent line */}
+        <div className="w-32 h-1 teal-accent mx-auto mt-12 animate-pulse"></div>
       </div>
     </section>
   );

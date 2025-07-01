@@ -3,7 +3,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Web500ZA Bold Color Strategy - Strategic Emerald */
+/* Web500ZA Bold Color Strategy - Professional Navy */
 
 @layer base {
   :root {
@@ -16,62 +16,62 @@
     --popover: 0 0% 100%;
     --popover-foreground: 0 0% 18%;
 
-    --primary: 158 64% 20%;
+    --primary: 230 76% 28%;
     --primary-foreground: 0 0% 98%;
 
-    --secondary: 158 20% 95%;
-    --secondary-foreground: 158 64% 20%;
+    --secondary: 230 20% 95%;
+    --secondary-foreground: 230 76% 28%;
 
-    --muted: 158 10% 95%;
+    --muted: 230 10% 95%;
     --muted-foreground: 0 0% 45%;
 
-    --accent: 158 30% 85%;
-    --accent-foreground: 158 64% 20%;
+    --accent: 230 30% 85%;
+    --accent-foreground: 230 76% 28%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 158 20% 90%;
-    --input: 158 20% 90%;
-    --ring: 158 64% 20%;
+    --border: 230 20% 90%;
+    --input: 230 20% 90%;
+    --ring: 230 76% 28%;
 
     --radius: 0.5rem;
 
-    /* Strategic Emerald System */
-    --emerald-deep: 158 64% 20%;
-    --emerald-rich: 158 54% 30%;
-    --emerald-soft: 158 30% 85%;
+    /* Professional Navy System */
+    --navy-deep: 230 76% 28%;
+    --teal-accent: 180 100% 25%;
+    --cool-gray: 220 13% 91%;
     --charcoal: 0 0% 18%;
     --soft-white: 0 0% 98%;
   }
 
   .dark {
-    --background: 158 64% 20%;
+    --background: 230 76% 28%;
     --foreground: 0 0% 98%;
 
-    --card: 158 64% 20%;
+    --card: 230 76% 28%;
     --card-foreground: 0 0% 98%;
 
-    --popover: 158 64% 20%;
+    --popover: 230 76% 28%;
     --popover-foreground: 0 0% 98%;
 
     --primary: 0 0% 98%;
-    --primary-foreground: 158 64% 20%;
+    --primary-foreground: 230 76% 28%;
 
-    --secondary: 158 54% 30%;
+    --secondary: 230 60% 35%;
     --secondary-foreground: 0 0% 98%;
 
-    --muted: 158 54% 30%;
-    --muted-foreground: 158 10% 70%;
+    --muted: 230 60% 35%;
+    --muted-foreground: 220 13% 70%;
 
-    --accent: 158 54% 30%;
+    --accent: 230 60% 35%;
     --accent-foreground: 0 0% 98%;
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 158 54% 30%;
-    --input: 158 54% 30%;
+    --border: 230 60% 35%;
+    --input: 230 60% 35%;
     --ring: 0 0% 98%;
   }
 }
@@ -88,24 +88,36 @@
 
 /* Custom Web500ZA Utilities */
 @layer utilities {
-  .emerald-deep {
-    background-color: hsl(var(--emerald-deep));
+  .navy-deep {
+    background-color: #1A1F71;
   }
   
-  .emerald-rich {
-    background-color: hsl(var(--emerald-rich));
+  .teal-accent {
+    background-color: #008080;
   }
   
-  .emerald-soft {
-    background-color: hsl(var(--emerald-soft));
+  .cool-gray {
+    background-color: #E5E7EB;
   }
   
   .text-soft-white {
-    color: hsl(var(--soft-white));
+    color: #FAFAFA;
   }
   
   .text-charcoal {
-    color: hsl(var(--charcoal));
+    color: #2E2E2E;
+  }
+
+  .text-teal {
+    color: #008080;
+  }
+
+  .border-teal {
+    border-color: #008080;
+  }
+
+  .hover\:bg-teal:hover {
+    background-color: #008080;
   }
 
   .hero-text {
