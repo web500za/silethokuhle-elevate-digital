@@ -58,7 +58,7 @@ const ContactForm = () => {
 
 const ConnectionSection = () => {
   return (
-    <section className="py-12 sm:py-20 md:py-28 px-4 sm:px-8 bg-blue-deep">
+    <section className="py-12 sm:py-20 md:py-28 px-4 sm:px-8 blue-gradient">
       <div className="max-w-4xl mx-auto text-center">
         <h2 className="statement-text text-white mb-8 font-bold text-2xl md:text-4xl">
           Ready for support that thinks ahead?
@@ -66,11 +66,11 @@ const ConnectionSection = () => {
         <p className="body-large text-white mb-12 max-w-2xl mx-auto text-base md:text-lg font-semibold">
           Stop settling for task execution. Start experiencing strategic transformation.
         </p>
-        <div className="flex flex-col sm:flex-row justify-center items-center gap-6 my-12">
+        <div className="flex flex-col sm:flex-row gap-6 sm:gap-8 justify-center my-10 sm:my-16">
           <Dialog>
             <DialogTrigger asChild>
               <Button 
-                className="h-14 px-8 text-base sm:text-lg rounded-lg font-semibold flex-1 min-w-[170px] bg-gold-accent text-blue-deep border-2 border-gold hover:bg-gold-accent/90 hover:text-blue-deep transition-all"
+                className="w-full sm:w-auto flex-1 py-4 px-8 text-base sm:text-lg rounded-lg font-semibold"
               >
                 Contact Me
               </Button>
@@ -85,8 +85,8 @@ const ConnectionSection = () => {
           <a
             href="/Silethokuhle-Mncube-CV-compressed_compressed.pdf"
             download
-            className="h-14 px-8 text-base sm:text-lg rounded-lg font-semibold flex-1 min-w-[170px] border-2 border-gold text-gold bg-transparent hover:bg-gold-accent hover:text-blue-deep transition-all flex items-center justify-center text-center"
-            style={{ minWidth: '170px' }}
+            className="w-full sm:w-auto flex-1 py-4 px-8 text-base sm:text-lg rounded-lg font-semibold border-2 border-white text-white bg-transparent hover:bg-white hover:text-blue-deep transition-all flex items-center justify-center"
+            style={{ minWidth: '150px' }}
           >
             Download CV
           </a>
