@@ -5,13 +5,16 @@ const gold = '#FFC300'; // Adjust this hex if your gold accent line uses a diffe
 
 const qualifications = [
   {
-    icon: <Award className="w-8 h-8" style={{ color: gold }} />, label: "PwC Alumni"
+    icon: <Award className="w-8 h-8 text-yellow-400" />,
+    label: "PwC Alumni"
   },
   {
-    icon: <Cloud className="w-8 h-8" style={{ color: gold }} />, label: "AWS Certified"
+    icon: <Cloud className="w-8 h-8 text-yellow-400" />,
+    label: "AWS Certified"
   },
   {
-    icon: <UserCheck className="w-8 h-8" style={{ color: gold }} />, label: "Virtual Expert"
+    icon: <UserCheck className="w-8 h-8 text-yellow-400" />,
+    label: "Virtual Expert"
   }
 ];
 
@@ -24,51 +27,50 @@ const HeroSection = () => {
   };
 
   return (
-    <section className="min-h-screen blue-gradient flex items-center justify-center relative overflow-hidden font-bold font-sans">
+    <section className="min-h-screen blue-gradient flex items-center justify-center relative overflow-hidden font-sans">
       {/* Subtle depth overlay */}
       <div className="absolute inset-0 bg-gradient-to-br from-black/10 via-transparent to-black/5"></div>
       <div className="relative z-10 max-w-6xl mx-auto text-center flex flex-col items-center justify-center w-full px-2 sm:px-0">
-        {/* Qualifications Highlight Bar */}
-        <div
-          className="w-full flex justify-between gap-x-6 md:gap-x-12 mb-6 md:mb-10 animate-fade-in"
-        >
+        {/* Selling Points */}
+        <div className="max-w-xl mx-auto w-full flex justify-center gap-x-10 md:gap-x-16 mb-12">
           {qualifications.map((q, i) => (
             <div
               key={q.label}
-              className="flex flex-col items-center text-center px-2 md:px-4 flex-1 min-w-0"
-              style={{ fontFamily: 'Inter, sans-serif' }}
+              className="flex flex-col items-center text-center flex-1 min-w-0"
             >
-              <div className="flex flex-col items-center justify-center">
-                {q.icon}
-                <span className="text-white/90 font-bold text-base md:text-lg tracking-wide mt-2 group-hover:text-yellow-400 transition-colors duration-200" style={{ fontFamily: 'Inter, sans-serif' }}>
-                  {q.label}
-                </span>
-              </div>
+              {q.icon}
+              <span className="mt-3 text-sm font-medium uppercase tracking-widest text-gray-300">
+                {q.label}
+              </span>
             </div>
           ))}
         </div>
-        <div className="space-y-8 md:space-y-12">
-          {/* Hero Name */}
-          <h1 className="hero-text text-white tracking-[0.12em] md:tracking-[0.18em] font-bold font-sans text-4xl sm:text-5xl md:text-7xl leading-tight md:leading-[0.9]">
-            SILETHOKUHLE
-            <br />
-            MNCUBE
-          </h1>
-          {/* Tagline */}
-          <h2 className="statement-text text-white/90 font-bold font-sans text-xl md:text-3xl">
-            Virtual Assistant
-          </h2>
-          {/* Subtitle */}
-          <p className="body-large text-white/80 max-w-2xl mx-auto font-sans text-base md:text-lg font-semibold">
-            PwC to Python, I transform how business gets done.
-          </p>
-        </div>
-        <div className="flex flex-col items-center mt-14 md:mt-24">
-          {/* Gold accent line */}
-          <div className="w-20 md:w-24 h-[2px] bg-yellow-400 mb-6 md:mb-12"></div>
-          {/* Scroll Indicator */}
+        {/* Name */}
+        <h1
+          className="text-white font-extrabold text-4xl sm:text-5xl md:text-7xl tracking-[0.12em] md:tracking-[0.16em] leading-tight md:leading-[0.9] mb-10 md:mb-14 transition-all"
+          style={{ fontFamily: 'Inter, sans-serif', letterSpacing: '0.12em' }}
+        >
+          SILETHOKUHLE<br className="hidden sm:block" />MNCUBE
+        </h1>
+        {/* Role */}
+        <h2
+          className="text-white/90 font-extralight text-base sm:text-xl md:text-2xl tracking-widest uppercase mb-8 md:mb-10"
+          style={{ fontFamily: 'Inter, sans-serif', letterSpacing: '0.18em' }}
+        >
+          Virtual Assistant
+        </h2>
+        {/* Tagline */}
+        <p
+          className="text-gray-400 font-medium text-base sm:text-lg max-w-xl md:max-w-2xl mx-auto mb-6 md:mb-8"
+          style={{ fontFamily: 'Inter, sans-serif' }}
+        >
+          PwC to Python, I transform how business gets done.
+        </p>
+        {/* Accent line & arrow */}
+        <div className="flex flex-col items-center mt-2 md:mt-4">
+          <div className="w-20 md:w-24 h-[2px] bg-yellow-400 mb-4 md:mb-6"></div>
           <button
-            className="w-16 h-16 flex items-center justify-center rounded-full active:scale-95 transition-transform duration-150 focus:outline-none"
+            className="w-12 h-12 flex items-center justify-center rounded-full active:scale-95 transition-transform duration-150 focus:outline-none"
             onClick={handleScroll}
             aria-label="Scroll to Why Choose Me"
             style={{ WebkitTapHighlightColor: 'transparent' }}
@@ -76,7 +78,7 @@ const HeroSection = () => {
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
-              className="w-8 h-8 text-yellow-400 animate-bounce opacity-60 hover:opacity-80 transition-opacity"
+              className="w-6 h-6 text-yellow-400 animate-bounce opacity-60 hover:opacity-80 transition-opacity"
             >
               <path fill="currentColor" d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z" />
             </svg>
