@@ -26,9 +26,9 @@ const ValuePillarsSection = () => {
   ];
 
   return (
-    <section id="value-pillars" className="py-24 px-6 bg-gray-100 font-sans">
+    <section id="value-pillars" className="py-12 sm:py-20 md:py-28 px-4 sm:px-8 bg-gray-100 text-center mb-8">
       <div className="max-w-6xl mx-auto flex flex-col items-center">
-        <h2 className="statement-text text-blue-deep text-center mb-4 font-bold text-2xl md:text-4xl font-sans">
+        <h2 className="statement-text text-blue-deep text-center mb-4 font-bold text-2xl md:text-4xl">
           Why Choose Me
         </h2>
         <button

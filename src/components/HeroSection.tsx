@@ -32,7 +32,7 @@ const HeroSection = () => {
       <div className="absolute inset-0 bg-gradient-to-br from-black/10 via-transparent to-black/5"></div>
       <div className="relative z-10 max-w-6xl mx-auto text-center flex flex-col items-center justify-center w-full px-2 sm:px-0">
         {/* Selling Points */}
-        <div className="max-w-xl mx-auto w-full flex justify-center gap-x-10 md:gap-x-16 mb-12">
+        <div className="max-w-xl mx-auto w-full flex justify-center gap-x-8 md:gap-x-16 mb-12">
           {qualifications.map((q, i) => (
             <div
               key={q.label}
@@ -47,10 +47,12 @@ const HeroSection = () => {
         </div>
         {/* Name */}
         <h1
-          className="text-white font-extrabold text-4xl sm:text-5xl md:text-7xl tracking-[0.12em] md:tracking-[0.16em] leading-tight md:leading-[0.9] mb-10 md:mb-14 transition-all"
-          style={{ fontFamily: 'Inter, sans-serif', letterSpacing: '0.12em' }}
+          className="text-white font-extrabold text-4xl sm:text-5xl md:text-7xl tracking-[0.08em] md:tracking-[0.12em] leading-tight md:leading-[0.9] mb-10 md:mb-14 transition-all"
+          style={{ fontFamily: 'Inter, sans-serif' }}
         >
-          SILETHOKUHLE<br className="hidden sm:block" />MNCUBE
+          SILETHOKUHLE
+          <br className="block" />
+          MNCUBE
         </h1>
         {/* Role */}
         <h2
@@ -61,7 +63,7 @@ const HeroSection = () => {
         </h2>
         {/* Tagline */}
         <p
-          className="text-gray-400 font-medium text-base sm:text-lg max-w-xl md:max-w-2xl mx-auto mb-6 md:mb-8"
+          className="text-gray-400 font-medium text-base sm:text-lg max-w-md md:max-w-xl mx-auto mb-6 md:mb-8"
           style={{ fontFamily: 'Inter, sans-serif' }}
         >
           PwC to Python, I transform how business gets done.
