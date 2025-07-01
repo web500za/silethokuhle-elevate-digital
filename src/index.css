@@ -1,9 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Web500ZA Bold Color Strategy - Professional Navy */
+/* Web500ZA Sophisticated Blue System - Premium Authority */
 
 @layer base {
   :root {
@@ -16,62 +18,82 @@
     --popover: 0 0% 100%;
     --popover-foreground: 0 0% 18%;
 
-    --primary: 230 76% 28%;
+    --primary: 215 35% 15%;
     --primary-foreground: 0 0% 98%;
 
-    --secondary: 230 20% 95%;
-    --secondary-foreground: 230 76% 28%;
+    --secondary: 215 35% 95%;
+    --secondary-foreground: 215 35% 15%;
 
     --muted: 230 10% 95%;
     --muted-foreground: 0 0% 45%;
 
-    --accent: 230 30% 85%;
-    --accent-foreground: 230 76% 28%;
+    --accent: 215 35% 85%;
+    --accent-foreground: 215 35% 15%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 230 20% 90%;
-    --input: 230 20% 90%;
-    --ring: 230 76% 28%;
+    --border: 215 35% 90%;
+    --input: 215 35% 90%;
+    --ring: 215 35% 15%;
 
     --radius: 0.5rem;
 
-    /* Professional Navy System */
-    --navy-deep: 230 76% 28%;
-    --teal-accent: 180 100% 25%;
-    --cool-gray: 220 13% 91%;
-    --charcoal: 0 0% 18%;
+    /* Web500ZA Sophisticated Blue System - Premium Authority */
+    --blue-deep: 215 35% 15%; /* Deep blue-charcoal - sophisticated and rich */
+    --blue-mid: 215 30% 20%; /* Mid-tone for gradients */
+    --blue-light: 215 25% 25%; /* Lighter for subtle variations */
+    --gold-accent: 45 100% 51%; /* Warm gold accent for luxury */
+    --cool-gray: 215 13% 91%;
+    --charcoal: 215 30% 18%;
     --soft-white: 0 0% 98%;
+    --blue-gradient: linear-gradient(135deg, hsl(215 35% 15%) 0%, hsl(215 30% 20%) 100%);
+  }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+  }
+
+  h1, h2, h3, .statement-text {
+    font-family: 'Inter', sans-serif;
+  }
+
+  .hero-text {
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(3rem, 8vw, 8rem);
+    line-height: 0.9;
+    font-weight: 200;
+    text-transform: uppercase;
   }
 
   .dark {
-    --background: 230 76% 28%;
+    --background: 215 35% 15%;
     --foreground: 0 0% 98%;
 
-    --card: 230 76% 28%;
+    --card: 215 35% 15%;
     --card-foreground: 0 0% 98%;
 
-    --popover: 230 76% 28%;
+    --popover: 215 35% 15%;
     --popover-foreground: 0 0% 98%;
 
     --primary: 0 0% 98%;
-    --primary-foreground: 230 76% 28%;
+    --primary-foreground: 215 35% 15%;
 
-    --secondary: 230 60% 35%;
+    --secondary: 215 30% 20%;
     --secondary-foreground: 0 0% 98%;
 
-    --muted: 230 60% 35%;
-    --muted-foreground: 220 13% 70%;
+    --muted: 215 30% 20%;
+    --muted-foreground: 215 13% 70%;
 
-    --accent: 230 60% 35%;
+    --accent: 215 30% 20%;
     --accent-foreground: 0 0% 98%;
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 230 60% 35%;
-    --input: 230 60% 35%;
+    --border: 215 30% 20%;
+    --input: 215 30% 20%;
     --ring: 0 0% 98%;
   }
 }
@@ -86,14 +108,22 @@
   }
 }
 
-/* Custom Web500ZA Utilities */
+/* Custom Web500ZA Utilities - Sophisticated Blue System */
 @layer utilities {
-  .navy-deep {
-    background-color: #1A1F71;
+  .blue-deep {
+    background-color: hsl(215 35% 15%);
   }
   
-  .teal-accent {
-    background-color: #008080;
+  .blue-gradient {
+    background: var(--blue-gradient);
+  }
+  
+  .gold-accent {
+    color: hsl(45 100% 51%);
+  }
+  
+  .gold-accent-bg {
+    background-color: hsl(45 100% 51%);
   }
   
   .cool-gray {
@@ -105,36 +135,48 @@
   }
   
   .text-charcoal {
-    color: #2E2E2E;
+    color: hsl(215 30% 18%);
   }
 
-  .text-teal {
-    color: #008080;
+  .text-gold {
+    color: hsl(45 100% 51%);
   }
 
-  .border-teal {
-    border-color: #008080;
+  .border-gold {
+    border-color: hsl(45 100% 51%);
   }
 
-  .hover\:bg-teal:hover {
-    background-color: #008080;
-  }
-
-  .hero-text {
-    font-size: clamp(3rem, 8vw, 8rem);
-    line-height: 0.9;
-    font-weight: 800;
-    letter-spacing: -0.02em;
+  .hover\:bg-gold:hover {
+    background-color: hsl(45 100% 51%);
   }
   
+  .blue-shadow {
+    box-shadow: 0 10px 25px -3px rgba(28, 34, 45, 0.3);
+  }
+  
+  .blue-glow {
+    box-shadow: 0 0 20px rgba(28, 34, 45, 0.15);
+  }
+  
+  .premium-spacing {
+    padding: clamp(2rem, 8vw, 6rem) 0;
+  }
+  
+  .luxury-whitespace {
+    margin: clamp(3rem, 10vw, 8rem) 0;
+  }
+
   .statement-text {
     font-size: clamp(1.5rem, 4vw, 3rem);
-    line-height: 1.1;
-    font-weight: 700;
+    line-height: 1.2;
+    font-weight: 300;
+    letter-spacing: -0.02em;
   }
   
   .body-large {
     font-size: clamp(1.125rem, 2vw, 1.5rem);
-    line-height: 1.4;
+    line-height: 1.6;
+    font-weight: 300;
+    letter-spacing: -0.01em;
   }
 }
