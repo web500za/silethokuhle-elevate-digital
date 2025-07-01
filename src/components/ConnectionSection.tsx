@@ -60,41 +60,38 @@ const ConnectionSection = () => {
   return (
     <section className="py-24 px-6 blue-gradient">
       <div className="max-w-4xl mx-auto text-center">
-        <h2 className="statement-text text-white mb-8">
+        <h2 className="statement-text text-white mb-8 font-bold font-[Montserrat,sans-serif] text-2xl md:text-4xl">
           Ready for support that thinks ahead?
         </h2>
-        
-        <p className="body-large text-white mb-12 max-w-2xl mx-auto">
+        <p className="body-large text-white mb-12 max-w-2xl mx-auto font-[Montserrat,sans-serif] text-base md:text-lg font-semibold">
           Stop settling for task execution. Start experiencing strategic transformation.
         </p>
-
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Dialog>
             <DialogTrigger asChild>
               <Button 
                 size="lg" 
-                className="bg-white text-blue-deep hover:bg-white/90 font-light px-8 py-4 text-lg"
+                className="bg-white text-blue-deep hover:bg-white/90 font-bold px-8 py-4 text-lg"
               >
                 Contact Me
               </Button>
             </DialogTrigger>
             <DialogContent className="sm:max-w-[425px]">
               <DialogHeader>
-                <DialogTitle className="text-2xl font-light text-blue-deep mb-4">Get in Touch</DialogTitle>
+                <DialogTitle className="text-2xl font-bold text-blue-deep mb-4 font-[Montserrat,sans-serif]">Get in Touch</DialogTitle>
               </DialogHeader>
               <ContactForm />
             </DialogContent>
           </Dialog>
           <Button 
             size="lg"
-            className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-deep font-light px-8 py-4 text-lg transition-all"
+            className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-deep font-bold px-8 py-4 text-lg transition-all"
           >
             Download CV
           </Button>
         </div>
-        
         <div className="mt-16 pt-8 border-t border-white/30">
-          <p className="text-white/90 text-sm">
+          <p className="text-white/90 text-sm font-[Montserrat,sans-serif]">
             Johannesburg-based • Global mindset • Youth mentor • Change catalyst
           </p>
         </div>
