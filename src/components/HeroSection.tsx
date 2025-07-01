@@ -5,13 +5,13 @@ const gold = '#FFC300'; // Adjust this hex if your gold accent line uses a diffe
 
 const qualifications = [
   {
-    icon: <Award className="w-8 h-8 md:w-7 md:h-7" style={{ color: gold }} />, label: "PwC Alumni"
+    icon: <Award className="w-8 h-8" style={{ color: gold }} />, label: "PwC Alumni"
   },
   {
-    icon: <Cloud className="w-8 h-8 md:w-7 md:h-7" style={{ color: gold }} />, label: "AWS Certified"
+    icon: <Cloud className="w-8 h-8" style={{ color: gold }} />, label: "AWS Certified"
   },
   {
-    icon: <UserCheck className="w-8 h-8 md:w-7 md:h-7" style={{ color: gold }} />, label: "Virtual Expert"
+    icon: <UserCheck className="w-8 h-8" style={{ color: gold }} />, label: "Virtual Expert"
   }
 ];
 
@@ -29,23 +29,22 @@ const HeroSection = () => {
       <div className="absolute inset-0 bg-gradient-to-br from-black/10 via-transparent to-black/5"></div>
       <div className="relative z-10 max-w-6xl mx-auto text-center flex flex-col items-center justify-center w-full px-2 sm:px-0">
         {/* Qualifications Highlight Bar */}
-        <div className="flex justify-center gap-8 md:gap-12 mb-10 md:mb-20 animate-fade-in px-2 md:px-0">
+        <div
+          className="w-full flex justify-between gap-x-6 md:gap-x-12 mb-6 md:mb-10 animate-fade-in"
+        >
           {qualifications.map((q, i) => (
-            <button
+            <div
               key={q.label}
-              className="group flex flex-col items-center cursor-pointer px-2 md:px-4 focus:outline-none active:scale-95 transition-transform duration-150"
-              tabIndex={0}
-              aria-label={q.label}
-              style={{ WebkitTapHighlightColor: 'transparent' }}
+              className="flex flex-col items-center text-center px-2 md:px-4 flex-1 min-w-0"
+              style={{ fontFamily: 'Inter, sans-serif' }}
             >
-              <div className="flex items-center gap-2 md:gap-3">
+              <div className="flex flex-col items-center justify-center">
                 {q.icon}
-                <span className="text-white/90 font-bold text-base md:text-lg tracking-wide group-hover:text-yellow-400 transition-colors duration-200 font-sans">
+                <span className="text-white/90 font-bold text-base md:text-lg tracking-wide mt-2 group-hover:text-yellow-400 transition-colors duration-200" style={{ fontFamily: 'Inter, sans-serif' }}>
                   {q.label}
                 </span>
               </div>
-              <div className="h-1 w-0 group-hover:w-8 bg-yellow-400 rounded-full mt-1 transition-all duration-300"></div>
-            </button>
+            </div>
           ))}
         </div>
         <div className="space-y-8 md:space-y-12">
@@ -64,9 +63,9 @@ const HeroSection = () => {
             PwC to Python, I transform how business gets done.
           </p>
         </div>
-        <div className="flex flex-col items-center mt-16 md:mt-24">
+        <div className="flex flex-col items-center mt-14 md:mt-24">
           {/* Gold accent line */}
-          <div className="w-20 md:w-24 h-[2px] bg-yellow-400 mb-8 md:mb-12"></div>
+          <div className="w-20 md:w-24 h-[2px] bg-yellow-400 mb-6 md:mb-12"></div>
           {/* Scroll Indicator */}
           <button
             className="w-16 h-16 flex items-center justify-center rounded-full active:scale-95 transition-transform duration-150 focus:outline-none"
