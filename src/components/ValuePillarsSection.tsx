@@ -26,9 +26,9 @@ const ValuePillarsSection = () => {
   ];
 
   return (
-    <section id="value-pillars" className="relative py-12 sm:py-20 md:py-28 px-4 sm:px-8 bg-gray-100 text-center mb-0 overflow-hidden">
+    <section id="value-pillars" className="relative py-12 sm:py-20 md:py-28 px-4 sm:px-8 bg-blue-deep text-center mb-0 overflow-hidden">
       <div className="max-w-6xl mx-auto flex flex-col items-center">
-        <h2 className="statement-text text-blue-deep text-center mb-4 font-bold text-2xl md:text-4xl">
+        <h2 className="statement-text text-white text-center mb-4 font-bold text-2xl md:text-4xl">
           Why Choose Me
         </h2>
         <button
@@ -37,7 +37,7 @@ const ValuePillarsSection = () => {
           onClick={() => setExpanded((v) => !v)}
         >
           <ChevronDown
-            className={`w-8 h-8 text-blue-deep transition-transform duration-300 ${expanded ? 'rotate-180' : ''}`}
+            className={`w-8 h-8 text-gold transition-transform duration-300 ${expanded ? 'rotate-180' : ''}`}
           />
         </button>
         <div
@@ -45,7 +45,7 @@ const ValuePillarsSection = () => {
         >
           <div className="grid md:grid-cols-3 gap-8">
             {pillars.map((pillar, index) => (
-              <Card key={index} className="border-none shadow-lg hover:shadow-xl transition-shadow duration-300 blue-gradient">
+              <Card key={index} className="border-none shadow-lg hover:shadow-xl transition-shadow duration-300 bg-transparent">
                 <CardContent className="p-8">
                   <div className="h-2 w-16 gold-accent-bg mb-6 rounded"></div>
                   <h3 className="text-2xl font-bold mb-2 text-white font-sans">{pillar.title}</h3>
@@ -60,8 +60,6 @@ const ValuePillarsSection = () => {
           </div>
         </div>
       </div>
-      {/* Soft gradient at the bottom for smooth transition */}
-      <div className="pointer-events-none absolute left-0 right-0 bottom-0 h-16 sm:h-24 bg-gradient-to-b from-gray-100 to-[#202838] opacity-100" />
     </section>
   );
 };
