@@ -18,7 +18,7 @@ const ContactForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-6">
+    <form onSubmit={handleSubmit} className="space-y-4">
       <div className="space-y-4">
         <div>
           <Input
@@ -49,7 +49,7 @@ const ContactForm = () => {
           />
         </div>
       </div>
-      <Button type="submit" className="w-full bg-blue-deep text-white hover:bg-blue-deep/90">
+      <Button type="submit" className="w-full bg-blue-deep text-white hover:bg-blue-deep/90 py-3 text-base rounded-lg font-semibold">
         Send Message
       </Button>
     </form>
@@ -75,18 +75,21 @@ const ConnectionSection = () => {
                 Contact Me
               </Button>
             </DialogTrigger>
-            <DialogContent className="sm:max-w-[425px]">
+            <DialogContent className="sm:max-w-[425px] px-4 sm:px-8 py-8 overflow-y-auto max-h-[90vh]">
               <DialogHeader>
                 <DialogTitle className="text-2xl font-bold text-blue-deep mb-4">Get in Touch</DialogTitle>
               </DialogHeader>
               <ContactForm />
             </DialogContent>
           </Dialog>
-          <Button 
-            className="w-full sm:w-auto py-4 px-8 text-base sm:text-lg rounded-lg font-semibold"
+          <a
+            href="/static/Silethokuhle-Mncube-CV-compressed_compressed.pdf"
+            download
+            className="w-full sm:w-auto py-4 px-8 text-base sm:text-lg rounded-lg font-semibold border-2 border-white text-white bg-transparent hover:bg-white hover:text-blue-deep transition-all flex items-center justify-center"
+            style={{ minWidth: '150px' }}
           >
             Download CV
-          </Button>
+          </a>
         </div>
         <div className="mt-16 pt-8 border-t border-white/30">
           <p className="text-white/90 text-sm">
