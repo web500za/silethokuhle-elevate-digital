@@ -1,10 +1,9 @@
 import { useState, useEffect } from "react";
-import HeroSection from "@/components/HeroSection";
-import DifferentiatorSection from "@/components/DifferentiatorSection";
-import ValuePillarsSection from "@/components/ValuePillarsSection";
-import ConnectionSection from "@/components/ConnectionSection";
+import HeroSection from "../components/HeroSection";
+import ValuePillarsSection from "../components/ValuePillarsSection";
+import ConnectionSection from "../components/ConnectionSection";
 
-const Index = () => {
+export default function Index() {
   const [revealed, setRevealed] = useState(false);
 
   // Handler to be passed to HeroSection
@@ -23,9 +22,8 @@ const Index = () => {
   }, [revealed]);
 
   return (
-    <div className="min-h-screen">
+    <main className="min-h-screen w-full">
       <HeroSection onReveal={handleReveal} revealed={revealed} />
-      <DifferentiatorSection />
       <div
         style={{
           maxHeight: revealed ? '2000px' : '0px',
@@ -37,8 +35,6 @@ const Index = () => {
         <ValuePillarsSection />
         <ConnectionSection />
       </div>
-    </div>
+    </main>
   );
-};
-
-export default Index;
+}

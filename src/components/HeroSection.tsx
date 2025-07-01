@@ -2,13 +2,13 @@ import { Award, Cloud, UserCheck } from "lucide-react";
 
 const qualifications = [
   {
-    icon: <Award className="w-7 h-7 text-white/80" />, label: "PwC Alumni"
+    icon: <Award className="w-7 h-7 md:w-7 md:h-7 text-white/80" />, label: "PwC Alumni"
   },
   {
-    icon: <Cloud className="w-7 h-7 text-white/80" />, label: "AWS Certified"
+    icon: <Cloud className="w-7 h-7 md:w-7 md:h-7 text-white/80" />, label: "AWS Certified"
   },
   {
-    icon: <UserCheck className="w-7 h-7 text-white/80" />, label: "Virtual Expert"
+    icon: <UserCheck className="w-7 h-7 md:w-7 md:h-7 text-white/80" />, label: "Virtual Expert"
   }
 ];
 
@@ -34,15 +34,15 @@ const HeroSection = ({ onReveal, revealed }: HeroSectionProps) => {
       <div className="absolute inset-0 bg-gradient-to-br from-black/10 via-transparent to-black/5"></div>
       <div className="relative z-10 max-w-6xl mx-auto text-center flex flex-col items-center justify-center w-full">
         {/* Qualifications Highlight Bar */}
-        <div className="flex justify-center gap-8 mb-20 animate-fade-in">
+        <div className="flex justify-center gap-6 md:gap-8 mb-10 md:mb-20 animate-fade-in">
           {qualifications.map((q, i) => (
             <div
               key={q.label}
-              className="group flex flex-col items-center cursor-pointer px-2"
+              className="group flex flex-col items-center cursor-pointer px-1 md:px-2"
             >
-              <div className="flex items-center gap-2">
+              <div className="flex items-center gap-1 md:gap-2">
                 {q.icon}
-                <span className="text-white/90 font-medium text-lg tracking-wide group-hover:text-gold-accent transition-colors duration-200 font-sans">
+                <span className="text-white/90 font-medium text-base md:text-lg tracking-wide group-hover:text-gold-accent transition-colors duration-200 font-sans">
                   {q.label}
                 </span>
               </div>
@@ -50,25 +50,25 @@ const HeroSection = ({ onReveal, revealed }: HeroSectionProps) => {
             </div>
           ))}
         </div>
-        <div className="space-y-12">
+        <div className="space-y-8 md:space-y-12">
           {/* Hero Name */}
-          <h1 className="hero-text text-white tracking-[0.18em] font-sans">
+          <h1 className="hero-text text-white tracking-[0.12em] md:tracking-[0.18em] font-sans text-4xl sm:text-5xl md:text-7xl leading-tight md:leading-[0.9]">
             SILETHOKUHLE
             <br />
             MNCUBE
           </h1>
           {/* Tagline */}
-          <h2 className="statement-text text-white/90 font-sans">
+          <h2 className="statement-text text-white/90 font-sans text-xl md:text-3xl">
             Virtual Assistant
           </h2>
           {/* Subtitle */}
-          <p className="body-large text-white/80 max-w-2xl mx-auto font-sans">
+          <p className="body-large text-white/80 max-w-2xl mx-auto font-sans text-base md:text-lg">
             PwC to Python, I transform how business gets done.
           </p>
         </div>
-        <div className="flex flex-col items-center mt-24">
+        <div className="flex flex-col items-center mt-16 md:mt-24">
           {/* Gold accent line */}
-          <div className="w-24 h-[2px] gold-accent-bg mb-12"></div>
+          <div className="w-20 md:w-24 h-[2px] gold-accent-bg mb-8 md:mb-12"></div>
           {/* Scroll Indicator */}
           <svg
             xmlns="http://www.w3.org/2000/svg"
