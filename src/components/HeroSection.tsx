@@ -53,10 +53,7 @@ const HeroSection = () => {
   };
 
   const handleContactClick = () => {
-    const contactButton = document.querySelector('[data-contact-trigger]') as HTMLButtonElement;
-    if (contactButton) {
-      contactButton.click();
-    }
+    window.location.href = 'mailto:silethokuhle@example.com?subject=Business Transformation Inquiry&body=Hi Silethokuhle,%0D%0A%0D%0AI\'d like to discuss how you can help transform my business through strategic automation and process optimization.%0D%0A%0D%0A[Tell me about your project here]%0D%0A%0D%0ABest regards,';
   };
 
   const toggleCard = (index: number) => {
@@ -127,7 +124,9 @@ const HeroSection = () => {
             {valuePillars.map((pillar, index) => (
               <Card 
                 key={index} 
-                className="border-none shadow-2xl hover:shadow-3xl transition-all duration-300 blue-gradient transform hover:-translate-y-1 cursor-pointer"
+                className={`border-none shadow-2xl hover:shadow-3xl transition-all duration-300 blue-gradient transform hover:-translate-y-1 cursor-pointer ${
+                  expandedCard === index ? 'ring-2 ring-yellow-400 ring-opacity-50' : ''
+                }`}
                 style={{
                   boxShadow: '0 20px 40px rgba(0, 0, 0, 0.3), 0 8px 16px rgba(0, 0, 0, 0.2)',
                   filter: 'drop-shadow(0 10px 20px rgba(0, 0, 0, 0.4))'
@@ -153,11 +152,11 @@ const HeroSection = () => {
                   </p>
                   
                   {/* Expand/Collapse Indicator */}
-                  <div className="flex justify-center mt-3">
+                  <div className="flex justify-center mt-4">
                     {expandedCard === index ? (
-                      <Minus className="w-4 h-4 text-yellow-400 transition-transform duration-300" />
+                      <Minus className="w-5 h-5 text-yellow-400 animate-breathe transition-transform duration-300" />
                     ) : (
-                      <Plus className="w-4 h-4 text-yellow-400 transition-transform duration-300" />
+                      <Plus className="w-5 h-5 text-yellow-400 animate-breathe transition-transform duration-300" />
                     )}
                   </div>
                 </CardContent>

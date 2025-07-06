@@ -115,6 +115,10 @@ const ContactForm = () => {
 };
 
 const ConnectionSection = () => {
+  const handleContactClick = () => {
+    window.location.href = 'mailto:silethokuhle@example.com?subject=Business Transformation Inquiry&body=Hi Silethokuhle,%0D%0A%0D%0AI\'d like to discuss how you can help transform my business through strategic automation and process optimization.%0D%0A%0D%0A[Tell me about your project here]%0D%0A%0D%0ABest regards,';
+  };
+
   return (
     <section id="connection-section" className="py-16 sm:py-24 md:py-32 px-4 sm:px-8 bg-white relative overflow-hidden">
       {/* Subtle background pattern */}
@@ -128,9 +132,6 @@ const ConnectionSection = () => {
       <div className="relative z-10 max-w-5xl mx-auto">
         {/* Header Section */}
         <div className="text-center mb-16 md:mb-20">
-          <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-deep/5 rounded-full mb-6">
-            <Star className="w-8 h-8 text-blue-deep" />
-          </div>
           <h2 className="statement-text text-blue-deep mb-6 font-bold text-3xl md:text-5xl lg:text-6xl tracking-tight">
             Ready to Transform Your Business?
           </h2>
@@ -161,25 +162,13 @@ const ConnectionSection = () => {
 
         {/* Primary CTAs */}
         <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16 md:mb-20">
-          <Dialog>
-            <DialogTrigger asChild>
-              <Button 
-                data-contact-trigger
-                className="w-full sm:w-auto flex-1 py-5 px-8 text-lg md:text-xl rounded-xl font-semibold bg-yellow-400 hover:bg-yellow-300 text-blue-deep transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
-                size="lg"
-              >
-                <MessageSquare className="w-5 h-5 md:w-6 md:h-6 mr-3" />
-                Start a Conversation
-              </Button>
-            </DialogTrigger>
-            <DialogContent className="sm:max-w-[500px] px-6 sm:px-8 py-8 overflow-y-auto max-h-[90vh]">
-              <DialogHeader>
-                <DialogTitle className="text-2xl font-bold text-blue-deep mb-2">Let's Connect</DialogTitle>
-                <p className="text-gray-600 text-sm">Tell me about your project and I'll get back to you within 24 hours.</p>
-              </DialogHeader>
-              <ContactForm />
-            </DialogContent>
-          </Dialog>
+          <button
+            onClick={handleContactClick}
+            className="w-full sm:w-auto flex-1 py-5 px-8 text-lg md:text-xl rounded-xl font-semibold bg-yellow-400 hover:bg-yellow-300 text-blue-deep transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center justify-center"
+          >
+            <Mail className="w-5 h-5 md:w-6 md:h-6 mr-3" />
+            Start a Conversation
+          </button>
           
           <a
             href="/Silethokuhle-Mncube-CV-compressed_compressed.pdf"
@@ -189,24 +178,6 @@ const ConnectionSection = () => {
           >
             <Download className="w-5 h-5 md:w-6 md:h-6 mr-3" />
             Download CV
-          </a>
-        </div>
-
-        {/* Additional CTAs */}
-        <div className="grid md:grid-cols-2 gap-6 max-w-2xl mx-auto mb-16 md:mb-20">
-          <a
-            href="mailto:silethokuhle@example.com"
-            className="group flex items-center justify-center p-6 bg-gradient-to-r from-blue-deep/5 to-blue-deep/10 hover:from-blue-deep/10 hover:to-blue-deep/20 text-blue-deep rounded-xl transition-all duration-300 border border-blue-deep/10 hover:border-blue-deep/20 shadow-sm hover:shadow-md transform hover:-translate-y-1"
-          >
-            <Mail className="w-6 h-6 mr-4 group-hover:scale-110 transition-transform duration-300" />
-            <span className="text-base md:text-lg font-medium">Direct Email</span>
-          </a>
-          <a
-            href="#"
-            className="group flex items-center justify-center p-6 bg-gradient-to-r from-blue-deep/5 to-blue-deep/10 hover:from-blue-deep/10 hover:to-blue-deep/20 text-blue-deep rounded-xl transition-all duration-300 border border-blue-deep/10 hover:border-blue-deep/20 shadow-sm hover:shadow-md transform hover:-translate-y-1"
-          >
-            <Calendar className="w-6 h-6 mr-4 group-hover:scale-110 transition-transform duration-300" />
-            <span className="text-base md:text-lg font-medium">Schedule Call</span>
           </a>
         </div>
 

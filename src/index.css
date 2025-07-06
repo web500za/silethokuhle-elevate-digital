@@ -198,6 +198,22 @@
     animation: bounce 1s infinite;
   }
 
+  /* Breathing animation */
+  @keyframes breathe {
+    0%, 100% {
+      transform: scale(1);
+      opacity: 0.8;
+    }
+    50% {
+      transform: scale(1.2);
+      opacity: 1;
+    }
+  }
+
+  .animate-breathe {
+    animation: breathe 2s ease-in-out infinite;
+  }
+
   /* Spin animation */
   @keyframes spin {
     to {
