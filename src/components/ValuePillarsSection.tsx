@@ -3,7 +3,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { ChevronDown } from "lucide-react";
 
 const ValuePillarsSection = () => {
-  const [expanded, setExpanded] = useState(false);
+  const [expanded, setExpanded] = useState(true);
   const pillars = [
     {
       title: "Corporate Excellence",
